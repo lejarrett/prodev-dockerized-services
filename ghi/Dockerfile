@@ -2,7 +2,8 @@ FROM python:3
 
 WORKDIR /usr/src/ghi
 
-COPY . .
+COPY server.py ./
 
-EXPOSE 80
-CMD [ "python3", "server.py" ]
+COPY . .
+EXPOSE 8080
+CMD [ "python3", "./server.py" ]
